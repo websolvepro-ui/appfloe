@@ -1,0 +1,6 @@
+{
+  "name": "Floe",
+  "description": "A privacy-first personal finance app that never requires bank account integration, featuring offline-first voice expense entry, envelope budgets, and soft-saving goals.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

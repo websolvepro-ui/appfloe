@@ -1,0 +1,50 @@
+{
+  "collections": {
+    "budgets": {
+      "fields": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "limit": { "type": "number" },
+        "spent": { "type": "number" },
+        "icon": { "type": "string" },
+        "color": { "type": "string" }
+      },
+      "rules": {
+        "read": "auth != null && resource.data.userId == auth.uid",
+        "create": "auth != null && request.resource.data.userId == auth.uid",
+        "update": "auth != null && resource.data.userId == auth.uid && request.resource.data.userId == auth.uid",
+        "delete": "auth != null && resource.data.userId == auth.uid"
+      }
+    },
+    "expenses": {
+      "fields": {
+        "userId": { "type": "string" },
+        "amount": { "type": "number" },
+        "categoryId": { "type": "string" },
+        "date": { "type": "string" },
+        "note": { "type": "string" }
+      },
+      "rules": {
+        "read": "auth != null && resource.data.userId == auth.uid",
+        "create": "auth != null && request.resource.data.userId == auth.uid",
+        "update": "auth != null && resource.data.userId == auth.uid && request.resource.data.userId == auth.uid",
+        "delete": "auth != null && resource.data.userId == auth.uid"
+      }
+    },
+    "goals": {
+      "fields": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "targetAmount": { "type": "number" },
+        "currentProgress": { "type": "number" },
+        "color": { "type": "string" }
+      },
+      "rules": {
+        "read": "auth != null && resource.data.userId == auth.uid",
+        "create": "auth != null && request.resource.data.userId == auth.uid",
+        "update": "auth != null && resource.data.userId == auth.uid && request.resource.data.userId == auth.uid",
+        "delete": "auth != null && resource.data.userId == auth.uid"
+      }
+    }
+  }
+}
